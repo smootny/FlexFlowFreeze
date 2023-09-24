@@ -24,10 +24,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "styles":[
+              "assets/fonts.css"
+              ]
+           
           },
           "configurations": {
             "production": {
