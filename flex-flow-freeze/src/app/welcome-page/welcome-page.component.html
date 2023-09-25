@@ -1,0 +1,4 @@
+<div class="container">
+    <input [(ngModel)]="name" (input)="checkInputs()" placeholder="Enter your name" class="input-name">
+    <button [class.active]="inputsFilled" (click)="goToProgressBar()">Go!</button>
+</div>
