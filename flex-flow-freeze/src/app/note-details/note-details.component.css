@@ -1,0 +1,118 @@
+.note-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #e7f8e7;
+  background: rgb(53, 231, 77);
+  background: linear-gradient(0deg, rgba(53, 231, 77, 1) 0%, rgba(231, 248, 231, 1) 100%);
+  margin: 0;
+  justify-content: space-evenly;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  margin: 10px 0 29px 0;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  width: 400px;
+  margin: auto;
+  justify-content: space-around;
+}
+input,
+textarea .ng-invalid {
+  background-color: #587458;
+}
+
+:focus,
+input,
+textarea {
+  border-color: #4a554a;
+}
+
+input {
+  outline: none;
+  border-radius: 0;
+  margin: 10px 0 29px 0;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  background-color: #587458;
+  color: white;
+  font-size: 30px;
+  opacity: 50%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.input:hover {
+  background-color: #204829;
+}
+.textarea {
+  border-radius: 0;
+  outline: none;
+  margin: 10px 0 29px 0;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  background-color: #587458;
+  color: white;
+  font-size: 30px;
+  opacity: 50%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.textarea:hover {
+  background-color: #204829;
+}
+label {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 5px 0 5px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cancel {
+  padding: 42px 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: black;
+}
+
+.cancel:hover {
+  opacity: 90%;
+  background: #e45e69;
+  color: black;
+}
+
+.success {
+  padding: 40px 20px;
+  border-radius: 50%;
+  color: #00ff33;
+  font-size: 20px;
+  margin: 0 auto;
+  opacity: 70%;
+  border-color: #45ac48;
+  color: black;
+  border: 3px solid rgb(0, 255, 0);
+  box-shadow: 0 0 0 3px #05d328;
+  -webkit-box-shadow: 0px 0px 100px 20px #05d328;
+  -moz-box-shadow: 0px 0px 100px 20px #05d328;
+  box-shadow: 0px 0px 100px 20px #05d328;
+}
+
+.success:valid {
+  border: 3px solid black;
+  background: #19361e;
+  box-shadow: 0 0 0 3px #19361e;
+  color: #00ff33;
+}

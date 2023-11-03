@@ -16,19 +16,15 @@
             "outputPath": "dist/flex-flow-freeze",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/assets/fonts.css"
-            ],
-            "styles":[
-              "src/assets/fonts.css"
-              ]
-           
+            "assets": ["src/favicon.ico", "src/assets", "src/assets/fonts.css"],
+            "styles": [
+              "src/assets/fonts.css",
+              "node_modules/bulma/css/bulma.min.css",
+              "node_modules/bulma/css/bulma.css",
+              "src/styles.css"
+            ]
           },
           "configurations": {
             "production": {
@@ -78,20 +74,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/assets/fonts.css"
-            ],
-            "styles": [
-              "src/styles.css",
-              "src/assets/fonts.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/assets/fonts.css"],
+            "styles": ["src/styles.css", "src/assets/fonts.css"],
             "scripts": []
           }
         }
