@@ -1,0 +1,35 @@
+.note-card-container {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 0 20px 0;
+  width: 320px;
+}
+.note-card-content {
+  padding: 30px;
+  color: #587458;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.note-card-title {
+  font-size: 24px;
+  color: #19361e;
+  font-weight: 400;
+}
+
+.x-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 34px;
+  width: 34px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/delete_icon.svg);
+  background-position: center;
+}
+
+.x-button:hover {
+  background-color: #abf1ac;
+}

@@ -1,32 +1,40 @@
 <body>
-    
-    <div class="button-container">
-        <div class="button-box">
-            <label>How much time you need for excentric move?</label>
-<input type="number" [(ngModel)]="fillTime" (input)="checkInputs()" placeholder="in seconds" class="input-time">
+  <div class="input-container">
+    <div class="input-box">
+      <label>How much time you need for excentric move?</label>
+      <input type="number" [(ngModel)]="fillTime" (input)="checkInputs()" placeholder="in seconds" class="input-time" />
 
-<label>How much time you need for pause?</label>
+      <label>How much time you need for pause?</label>
 
-<input type="number" [(ngModel)]="stayTime" (input)="checkInputs()" placeholder="in seconds" class="input-time">
-<label>How much time you need for izocentric move?</label>
+      <input type="number" [(ngModel)]="stayTime" (input)="checkInputs()" placeholder="in seconds" class="input-time" />
+      <label>How much time you need for izocentric move?</label>
 
-<input type="number" [(ngModel)]="emptyTime" (input)="checkInputs()" placeholder="in seconds" class="input-time">
-<label>How much time you need to prepare yourself for exercise?</label>
+      <input
+        type="number"
+        [(ngModel)]="emptyTime"
+        (input)="checkInputs()"
+        placeholder="in seconds"
+        class="input-time"
+      />
+      <label>How much time you need to prepare yourself for exercise?</label>
 
-<input type="number" [(ngModel)]="debounceTime" (input)="checkInputs()" placeholder="in seconds" class="input-time">
-<label>How many reps you want to do?</label>
+      <input
+        type="number"
+        [(ngModel)]="debounceTime"
+        (input)="checkInputs()"
+        placeholder="in seconds"
+        class="input-time"
+      />
+      <label>How many reps you want to do?</label>
 
-<input type="number" [(ngModel)]="repetitions" (input)="checkInputs()" placeholder="amount" min="1" class="input-time">
-</div>
+      <input type="number" [(ngModel)]="repetitions" (input)="checkInputs()" placeholder="amount" class="input-time" />
+      <button [class.active]="inputsFilled" (click)="startProgressBar()">Start</button>
 
-<button [class.active]="inputsFilled" (click)="startProgressBar()">Start</button>
-</div>
-<div class="progress-bar" #progressBar></div>
-<div class="countdown-timer" *ngIf="countdownTimer > 0">
-    {{ countdownTimer }}
-</div>
-
+      <div class="progress-bar" #progressBar>
+        <div class="countdown-timer" *ngIf="countdownTimer > 0">
+          {{ countdownTimer }}
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
-
-
-

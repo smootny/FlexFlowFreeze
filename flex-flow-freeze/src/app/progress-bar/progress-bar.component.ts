@@ -3,7 +3,7 @@ import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-progress-bar',
   templateUrl: './progress-bar.component.html',
-  styleUrls: ['./progress-bar.component.css']
+  styleUrls: ['./progress-bar.component.css'],
 })
 export class ProgressBarComponent {
   currentHeight = 0;
@@ -19,15 +19,15 @@ export class ProgressBarComponent {
   debounceTime!: number;
   repetitions!: number;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2) {}
 
   inputsFilled: boolean = false;
 
   checkInputs(): void {
-    this.inputsFilled = [this.fillTime, this.stayTime, this.emptyTime, this.debounceTime, this.repetitions].every(val => typeof val === 'number' && !isNaN(val));
+    this.inputsFilled = [this.fillTime, this.stayTime, this.emptyTime, this.debounceTime, this.repetitions].every(
+      (val) => typeof val === 'number' && !isNaN(val)
+    );
   }
-
- 
 
   startProgressBar() {
     clearInterval(this.interval);
@@ -35,11 +35,11 @@ export class ProgressBarComponent {
     this.countdownTimer = this.debounceTime;
 
     const timerInterval = setInterval(() => {
-        this.countdownTimer -= 1;
-        if (this.countdownTimer <= 0) {
-            clearInterval(timerInterval);
-            this.runRepetitions();
-        }
+      this.countdownTimer -= 1;
+      if (this.countdownTimer <= 0) {
+        clearInterval(timerInterval);
+        this.runRepetitions();
+      }
     }, 1000);
   }
 
@@ -52,19 +52,18 @@ export class ProgressBarComponent {
       this.fillProgressBar();
       this.repetitions--;
     }
-}
+  }
 
   fillProgressBar() {
-    
     const incrementSize = 100 / (this.fillTime * 100);
     this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', '#FF0033');
     this.interval = setInterval(() => {
-        this.currentHeight += incrementSize;
-        this.renderer.setStyle(this.progressBar.nativeElement, 'height', `${this.currentHeight}%`);
-        if (this.currentHeight >= 100) {
-            clearInterval(this.interval);
-            this.stayTimeEffect();
-        }
+      this.currentHeight += incrementSize;
+      this.renderer.setStyle(this.progressBar.nativeElement, 'height', `${this.currentHeight}%`);
+      if (this.currentHeight >= 100) {
+        clearInterval(this.interval);
+        this.stayTimeEffect();
+      }
     }, 10);
   }
 
@@ -74,43 +73,43 @@ export class ProgressBarComponent {
     const decrementSize = 100 / (this.stayTime * 100);
     this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', '#FFFF00');
     this.interval = setInterval(() => {
-        this.currentWidth -= decrementSize;
-        this.renderer.setStyle(this.progressBar.nativeElement, 'width', `${this.currentWidth}%`);
-        this.renderer.setStyle(this.progressBar.nativeElement, 'left', `${(100 - this.currentWidth) / 2}%`);
-        if (this.currentWidth <= 0) {
-            clearInterval(this.interval);
-            this.emptyProgressBar();
-        }
+      this.currentWidth -= decrementSize;
+      this.renderer.setStyle(this.progressBar.nativeElement, 'width', `${this.currentWidth}%`);
+      this.renderer.setStyle(this.progressBar.nativeElement, 'left', `${(100 - this.currentWidth) / 2}%`);
+      if (this.currentWidth <= 0) {
+        clearInterval(this.interval);
+        this.emptyProgressBar();
+      }
     }, 10);
-}
-emptyProgressBar() {
-  this.currentHeight = 0; // Start from 0
-  this.renderer.setStyle(this.progressBar.nativeElement, 'width', '100%'); 
-  this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%'); // Reset left
-  this.renderer.setStyle(this.progressBar.nativeElement, 'top', 'auto'); 
-  this.renderer.setStyle(this.progressBar.nativeElement, 'bottom', '0%'); // Position bar at the bottom
+  }
+  emptyProgressBar() {
+    this.currentHeight = 0; // Start from 0
+    this.renderer.setStyle(this.progressBar.nativeElement, 'width', '100%');
+    this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%'); // Reset left
+    this.renderer.setStyle(this.progressBar.nativeElement, 'top', 'auto');
+    this.renderer.setStyle(this.progressBar.nativeElement, 'bottom', '0%'); // Position bar at the bottom
 
-  const incrementSize = 100 / (this.emptyTime * 100);
-  this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', '#00FFFF');
-  this.interval = setInterval(() => {
+    const incrementSize = 100 / (this.emptyTime * 100);
+    this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', '#00FFFF');
+    this.interval = setInterval(() => {
       this.currentHeight += incrementSize; // Increase the height
       this.renderer.setStyle(this.progressBar.nativeElement, 'height', `${this.currentHeight}%`);
       if (this.currentHeight >= 100) {
-          clearInterval(this.interval);
-          if (this.repetitions > 0) {
-              this.runRepetitions();
-          } else {
-              this.resetAll();  // Reset everything once all is done
-          }
+        clearInterval(this.interval);
+        if (this.repetitions > 0) {
+          this.runRepetitions();
+        } else {
+          this.resetAll(); // Reset everything once all is done
+        }
       }
-  }, 10);
-}
+    }, 10);
+  }
 
-resetAll() {
-  // Reset the progress bar's appearance
-  this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', 'white'); // Or any other default color
-  this.renderer.setStyle(this.progressBar.nativeElement, 'height', '0');
-  this.renderer.setStyle(this.progressBar.nativeElement, 'width', '100%');
-  this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%');
-}
+  resetAll() {
+    // Reset the progress bar's appearance
+    this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', 'white'); // Or any other default color
+    this.renderer.setStyle(this.progressBar.nativeElement, 'height', '0');
+    this.renderer.setStyle(this.progressBar.nativeElement, 'width', '100%');
+    this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%');
+  }
 }

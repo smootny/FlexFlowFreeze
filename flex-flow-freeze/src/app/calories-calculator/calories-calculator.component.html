@@ -1,0 +1,16 @@
+<body>
+  <div class="input-container">
+    <div class="total-calories">
+      <label class="total"> Total: </label>
+      <p class="amount-number">{{ totalAmount }} kcal</p>
+    </div>
+    <div class="container">
+      <label>How many calories did you eat today?</label>
+      <input type="number" [(ngModel)]="inputCalories" placeholder="kcal" class="input-calories" />
+      <div class="button-container">
+        <button class="reset-button" (click)="resetTotal()">Reset</button>
+        <button class="add-button" (click)="addCalories()">Add</button>
+      </div>
+    </div>
+  </div>
+</body>

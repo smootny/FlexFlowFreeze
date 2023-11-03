@@ -1,0 +1,18 @@
+<div class="main-container">
+  <div class="search-bar-container">
+    <input type="text" #searchInput class="search-bar" placeholder="Search..." (input)="filter(searchInput.value)" />
+  </div>
+
+  <div class="notes-list" [@listAnim]>
+    <app-note-card
+      *ngFor="let note of filteredNotes"
+      [link]="generateNoteURL(note)"
+      [@itemAnim]
+      (delete)="deleteNote(note)"
+      [title]="note.title"
+      [body]="note.body"
+    ></app-note-card>
+  </div>
+
+  <button class="add-button" routerLink="new">+ Add</button>
+</div>
