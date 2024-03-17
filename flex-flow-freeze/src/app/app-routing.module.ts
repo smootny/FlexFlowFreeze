@@ -7,12 +7,13 @@ import { NotebookListComponent } from './notebook-list/notebook-list.component';
 import { NoteDetailsComponent } from './note-details/note-details.component';
 import { CaloriesCalculatorComponent } from './calories-calculator/calories-calculator.component';
 import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
+import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
 
 const routes: Routes = [
   { path: '', component: WelcomePageComponent },
   { path: 'progress-bar', component: ProgressBarComponent },
   { path: 'calories-calculator', component: CaloriesCalculatorComponent },
-  { path: 'menu', component: MenuPageComponent }, // Updated to MenuPageComponent
+  { path: 'menu', component: MenuPageComponent }, 
   {
     path: 'notes-layout',
     component: NotesLayoutComponent,
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: ':id', component: NoteDetailsComponent },
     ],
   },
+  { path: 'water-intake-calculator', component: WaterIntakeCalculatorComponent}
 
   // { path: 'settings', component: SettingsComponent },
 ];

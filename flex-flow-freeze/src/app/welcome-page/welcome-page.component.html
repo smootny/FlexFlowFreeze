@@ -1,4 +1,5 @@
 <div class="welcome-container">
   <input [(ngModel)]="name" (input)="checkInputs()" placeholder="Enter your name" class="input-name" />
+  <div class="logo"></div>
   <button [class.active]="inputsFilled" (click)="goToMenuPage()">Go!</button>
 </div>
