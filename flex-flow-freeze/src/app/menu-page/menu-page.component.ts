@@ -12,23 +12,23 @@ export class MenuPageComponent {
   goTo(route: string) {
     switch (route) {
       case 'training':
-        // Navigate to your progress-bar page
+        // Navigate to progress-bar page
         this.router.navigate(['/progress-bar']);
         break;
       case 'notebook':
-        // Navigate to your notebook page
+        // Navigate to notebook page
         this.router.navigate(['/notes-layout']);
         break;
       case 'calculator':
-        // Navigate to your calculator page
+        // Navigate to calculator page
         this.router.navigate(['/calories-calculator']);
         break;
       case 'water':
-        // Navigate to your calculator page
+        // Navigate to calculator page
         this.router.navigate(['/water-intake-calculator']);
         break;
       case 'settings':
-        // Navigate to your settings page
+        // Navigate to settings page
         this.router.navigate(['/settings']);
         break;
     }
