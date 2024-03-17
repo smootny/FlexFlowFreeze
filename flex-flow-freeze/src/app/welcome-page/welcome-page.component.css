@@ -57,3 +57,15 @@ button.active {
   margin: 0px auto;
   opacity: 50%;
 }
+
+.logo {
+  position: absolute;
+  top: -80px;
+  left: -270px;
+  height: 520px;
+  width: 920px;
+  transform: scale(0.4);
+  background-repeat: no-repeat;
+  background-image: url(../../assets/logo-training.png);
+  background-position: center;
+}

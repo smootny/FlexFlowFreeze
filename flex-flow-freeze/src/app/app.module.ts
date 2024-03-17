@@ -12,6 +12,7 @@ import { NoteCardComponent } from './note-card/note-card.component';
 import { NoteDetailsComponent } from './note-details/note-details.component';
 import { CaloriesCalculatorComponent } from './calories-calculator/calories-calculator.component';
 import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
+import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
     NoteDetailsComponent,
     CaloriesCalculatorComponent,
     NotesLayoutComponent,
+    WaterIntakeCalculatorComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

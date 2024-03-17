@@ -23,6 +23,10 @@ export class MenuPageComponent {
         // Navigate to your calculator page
         this.router.navigate(['/calories-calculator']);
         break;
+      case 'water':
+        // Navigate to your calculator page
+        this.router.navigate(['/water-intake-calculator']);
+        break;
       case 'settings':
         // Navigate to your settings page
         this.router.navigate(['/settings']);
