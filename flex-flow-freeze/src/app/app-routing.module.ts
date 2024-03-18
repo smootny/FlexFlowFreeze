@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WelcomePageComponent } from './welcome-page/welcome-page.component'; // Import your welcome page component
-import { ProgressBarComponent } from './progress-bar/progress-bar.component'; // Import your progress bar component
+import { WelcomePageComponent } from './welcome-page/welcome-page.component'; 
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { NotebookListComponent } from './notebook-list/notebook-list.component';
 import { NoteDetailsComponent } from './note-details/note-details.component';
