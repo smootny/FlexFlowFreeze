@@ -34,7 +34,7 @@ export class NoteDetailsComponent implements OnInit {
     } else {
       this.notesService.update(this.noteId, form.value.title, form.value.body);
     }
-    this.router.navigateByUrl('/notes-layout');
+    this.router.navigateByUrl('/notes-layout', { replaceUrl: true });
   }
 
   cancel() {
