@@ -10,20 +10,24 @@ export class WaterIntakeCalculatorComponent {
   age!: number;
   weight!: number;
   totalWaterIntake!: number;
-  inputWater: number = 0;
+  inputWater: number | null = null;
   drankWater: number = 0;
+  waterInputFilled: boolean = false;
   waterIntakePercentage: number = 0;
   showProgress: boolean = false;
   circleStyle!: string;
-  inputsFilled: boolean = false; // Use this to track if all inputs are filled
+  inputsFilled: boolean = false; 
 
   checkInputs(): void {
     this.inputsFilled = this.gender.trim() !== '' && this.age !== undefined && this.weight !== undefined && this.age !== null && this.weight !== null;
   }
 
+  checkWaterInput(): void {
+    this.waterInputFilled = this.inputWater !== null && this.inputWater > 0;
+  }
   calculateWaterIntake() {
     if (this.inputsFilled) {
-      this.totalWaterIntake = this.weight * 30; // Simplified calculation
+      this.totalWaterIntake = this.weight * 30; 
       this.showProgress = true;
       this.updateCircle();
     } else {
@@ -31,12 +35,17 @@ export class WaterIntakeCalculatorComponent {
     }
   }
 
+  
   updateProgress() {
-    this.drankWater += this.inputWater; // Add the input value to the total
-    this.waterIntakePercentage = Math.min((this.drankWater / this.totalWaterIntake) * 100, 100);
-    this.inputWater = 0; // Reset the input field
-    this.updateCircle();
-  }
+    if (this.inputWater && this.inputWater > 0) {
+      this.drankWater += this.inputWater;
+      this.waterIntakePercentage = Math.min((this.drankWater / this.totalWaterIntake) * 100, 100);
+      this.inputWater = null; 
+      this.waterInputFilled = false;
+      this.updateCircle();
+    }
+  }  
+  
 
   updateCircle() {
     const circlePercentage = this.waterIntakePercentage > 100 ? 100 : this.waterIntakePercentage;

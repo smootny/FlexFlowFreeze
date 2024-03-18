@@ -50,7 +50,7 @@ app-note-card {
   outline: none;
   margin: 20px 0 0px 0;
   height: 40px;
-  width: 100%;
+  width: 300px;
   text-align: center;
   background-color: #587458;
   color: white;
@@ -60,4 +60,9 @@ app-note-card {
 }
 .search-bar:hover {
   background-color: #204829;
+}
+
+.search-bar::placeholder {
+  color: black;
+
 }
