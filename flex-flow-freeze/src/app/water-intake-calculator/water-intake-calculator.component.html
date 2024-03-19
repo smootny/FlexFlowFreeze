@@ -10,7 +10,7 @@
         <button class="calculate-button" [class.active]="inputsFilled" (click)="calculateWaterIntake()">Calculate</button>
       </div>
       
-      <div *ngIf="showProgress">
+      <div *ngIf="showProgress" class="water-progress">
         <p class="water-display">You should drink {{ totalWaterIntake }} ml of water daily.</p>
         <div class="progress-circle" [ngStyle]="{'background-image': circleStyle}">
           <span>{{ waterIntakePercentage.toFixed(0) }}%</span>
