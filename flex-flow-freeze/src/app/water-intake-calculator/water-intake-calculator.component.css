@@ -39,7 +39,7 @@
 
   .calculate-button {
     position: fixed;
-    bottom: 10px;
+    bottom: 30px;
     padding: 50px 25px;
     border-radius: 50%;
     color: #00ff33;
@@ -132,4 +132,11 @@
 
   .water-display {
     text-align: center;
+    font-size: 20px;
+  }
+
+  .water-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
   }

@@ -22,7 +22,7 @@ app-note-card {
 }
 .add-button {
   position: fixed;
-  bottom: 10px;
+  bottom: 30px;
   padding: 50px 38px;
   border-radius: 50%;
   color: #00ff33;
