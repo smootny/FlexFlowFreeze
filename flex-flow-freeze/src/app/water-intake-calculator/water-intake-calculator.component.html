@@ -12,10 +12,23 @@
       
       <div *ngIf="showProgress" class="water-progress">
         <p class="water-display">You should drink {{ totalWaterIntake }} ml of water daily.</p>
-        <div class="progress-circle" [ngStyle]="{'background-image': circleStyle}">
-          <span>{{ waterIntakePercentage.toFixed(0) }}%</span>
-        </div>
-        <input class="input-time" type="number" [(ngModel)]="inputWater"  (input)="checkWaterInput()"  placeholder="Water intake (ml)">
+        <circle-progress
+          class="circle-progress"
+          [titleFontSize]="'30'"
+          [subtitleFontSize]="'20'"
+          [unitsFontSize]="'30'"
+          [titleFontWeight]="'500'"
+          [unitsFontWeight]="'500'"
+          [subtitleFontWeight]="'500'"
+          [percent]="waterIntakePercentage" 
+          [radius]="100"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#78C000'"
+          [innerStrokeColor]="'#C7E596'"
+          [animation]="true"
+          [animationDuration]="300"></circle-progress>
+        <input class="input-time" type="number" [(ngModel)]="inputWater" (input)="checkWaterInput()" placeholder="Water intake (ml)">
         <button class="add-button" [class.active]="waterInputFilled" (click)="updateProgress()">+ Add</button>
       </div>
       

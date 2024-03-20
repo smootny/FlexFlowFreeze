@@ -13,6 +13,7 @@ import { NoteDetailsComponent } from './note-details/note-details.component';
 import { CaloriesCalculatorComponent } from './calories-calculator/calories-calculator.component';
 import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
 import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-
     NotesLayoutComponent,
     WaterIntakeCalculatorComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule,
+     NgCircleProgressModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })
