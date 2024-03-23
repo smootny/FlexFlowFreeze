@@ -14,6 +14,7 @@ import { CaloriesCalculatorComponent } from './calories-calculator/calories-calc
 import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
 import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ImageComparisonComponent } from './image-comparison/image-comparison.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     CaloriesCalculatorComponent,
     NotesLayoutComponent,
     WaterIntakeCalculatorComponent,
+    ImageComparisonComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule,
      NgCircleProgressModule.forRoot()],

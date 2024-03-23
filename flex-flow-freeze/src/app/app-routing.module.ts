@@ -8,6 +8,7 @@ import { NoteDetailsComponent } from './note-details/note-details.component';
 import { CaloriesCalculatorComponent } from './calories-calculator/calories-calculator.component';
 import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
 import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
+import { ImageComparisonComponent } from './image-comparison/image-comparison.component';
 
 const routes: Routes = [
   { path: '', component: WelcomePageComponent },
@@ -23,8 +24,8 @@ const routes: Routes = [
       { path: ':id', component: NoteDetailsComponent },
     ],
   },
-  { path: 'water-intake-calculator', component: WaterIntakeCalculatorComponent}
-
+  { path: 'water-intake-calculator', component: WaterIntakeCalculatorComponent},
+  { path: 'image-comparison', component: ImageComparisonComponent}
   // { path: 'settings', component: SettingsComponent },
 ];
 
