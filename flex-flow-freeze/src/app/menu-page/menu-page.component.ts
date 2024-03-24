@@ -27,6 +27,10 @@ export class MenuPageComponent {
         // Navigate to calculator page
         this.router.navigate(['/water-intake-calculator']);
         break;
+      case 'image-comparison':
+        // Navigate to image comparison
+        this.router.navigate(['/image-comparison']);
+        break;
       case 'settings':
         // Navigate to settings page
         this.router.navigate(['/settings']);
