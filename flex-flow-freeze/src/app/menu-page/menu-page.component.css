@@ -11,6 +11,9 @@
 }
 
 .menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   /* margin: 60px 0 30px 0; */
   height: 50px;
   width: 100vw;
@@ -20,8 +23,16 @@
   font-size: 25px;
   opacity: 70%;
   font-family: 'Orbitron', sans-serif;
+  padding: 0 20px 0 20px;
 }
 
 .menu-button:hover {
   opacity: 0.5;
+}
+
+.icon {
+
+  width: auto;
+  height: 40px;
+
 }
