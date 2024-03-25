@@ -1,17 +1,17 @@
-<body>
-    <div class="input-container">
-      <div class="total-calories">
-        <label class="total"> Total: </label>
-        <p class="amount-number"> kcal</p>
-      </div>
-      <div class="container">
-        <label>How many calories did you eat today?</label>
-        <input type="number"  placeholder="kcal" class="input-calories" />
-        <div class="button-container">
-          <button class="reset-button">Reset</button>
-          <button class="add-button">Add</button>
-        </div>
-      </div>
+<div class="layout-box">
+
+  <div class="wrapper">
+    <div class="images">
+      <div class="img-1"></div>
+      <div class="img-2" #image></div>
     </div>
-  </body>
-  
+    <div class="slider">
+      <div class="drag-line" #dragLine>
+        <span></span>
+      </div>
+      <input type="range" min="0" max="100" value="50" (input)="adjustImage($event)" #slider>
+    </div>
+  </div>
+  <button class="upload-button-before">BEFORE</button>
+  <button class="upload-button-after">AFTER</button>
+</div>
