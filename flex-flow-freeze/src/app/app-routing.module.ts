@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WelcomePageComponent } from './welcome-page/welcome-page.component'; 
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { NotebookListComponent } from './notebook-list/notebook-list.component';
@@ -9,12 +9,13 @@ import { CaloriesCalculatorComponent } from './calories-calculator/calories-calc
 import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
 import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
 import { ImageComparisonComponent } from './image-comparison/image-comparison.component';
+import {SettingsComponent} from "./settings/settings.component";
 
 const routes: Routes = [
   { path: '', component: WelcomePageComponent },
   { path: 'progress-bar', component: ProgressBarComponent },
   { path: 'calories-calculator', component: CaloriesCalculatorComponent },
-  { path: 'menu', component: MenuPageComponent }, 
+  { path: 'menu', component: MenuPageComponent },
   {
     path: 'notes-layout',
     component: NotesLayoutComponent,
@@ -25,8 +26,8 @@ const routes: Routes = [
     ],
   },
   { path: 'water-intake-calculator', component: WaterIntakeCalculatorComponent},
-  { path: 'image-comparison', component: ImageComparisonComponent}
-  // { path: 'settings', component: SettingsComponent },
+  { path: 'image-comparison', component: ImageComparisonComponent},
+  { path: 'settings', component: SettingsComponent },
 ];
 
 @NgModule({

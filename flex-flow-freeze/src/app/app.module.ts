@@ -15,6 +15,8 @@ import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
 import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ImageComparisonComponent } from './image-comparison/image-comparison.component';
+import { SettingsComponent } from './settings/settings.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -29,9 +31,10 @@ import { ImageComparisonComponent } from './image-comparison/image-comparison.co
     NotesLayoutComponent,
     WaterIntakeCalculatorComponent,
     ImageComparisonComponent,
+    SettingsComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule,
-     NgCircleProgressModule.forRoot()],
+    NgCircleProgressModule.forRoot(), NgOptimizedImage],
   providers: [],
   bootstrap: [AppComponent],
 })
