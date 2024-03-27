@@ -129,12 +129,10 @@
   display: none;
 }
 
-/* You can also copy over the :hover styles from the app.js to CSS */
 .profile-pic-div:hover #uploadBtn {
   display: block;
 }
 
-/* Ensure the upload button is hidden by default */
 #uploadBtn {
   display: none;
 }
