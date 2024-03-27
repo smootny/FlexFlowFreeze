@@ -1,15 +1,32 @@
 <body>
 <div class="input-container">
+  <div class="container">
+    <div class="profile-pic-div">
+      <img ngSrc="./assets/image.jpg" id="photo" alt="profile picture" height="728" width="728">
+      <input type="file" id="file" (change)="onFileChange($event)">
+      <label for="file" id="uploadBtn">Choose Photo</label>
+    </div>
+  </div>
+  <span class="name">Sebastian</span>
 
   <div class="container">
     <div class="button-container">
+      <p class="title-options">Light / Dark Mode</p>
       <label class="toggle-switch">
         <input type="checkbox">
         <div class="toggle-switch-background">
           <div class="toggle-switch-handle"></div>
         </div>
       </label>
-
+    </div>
+    <div class="button-container">
+      <p class="title-options">Notifications</p>
+      <label class="toggle-switch">
+        <input type="checkbox">
+        <div class="toggle-switch-background">
+          <div class="toggle-switch-handle"></div>
+        </div>
+      </label>
     </div>
   </div>
 </div>
