@@ -17,6 +17,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ImageComparisonComponent } from './image-comparison/image-comparison.component';
 import { SettingsComponent } from './settings/settings.component';
 import {NgOptimizedImage} from "@angular/common";
+import { StopwatchComponent } from './stopwatch/stopwatch.component';
+import {StopwatchService} from "./shared/stopwatch.service";
 
 @NgModule({
   declarations: [
@@ -32,10 +34,11 @@ import {NgOptimizedImage} from "@angular/common";
     WaterIntakeCalculatorComponent,
     ImageComparisonComponent,
     SettingsComponent,
+    StopwatchComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule,
     NgCircleProgressModule.forRoot(), NgOptimizedImage],
-  providers: [],
+  providers: [StopwatchService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
