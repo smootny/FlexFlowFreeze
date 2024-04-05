@@ -8,8 +8,13 @@ import { map, switchMap, takeWhile } from 'rxjs/operators';
 export class StopwatchService {
   private time = 0;
   private isRunning = new BehaviorSubject<boolean>(false);
+  private laps: any[] = [];
 
   constructor() { }
+
+  isStopwatchRunning(): boolean {
+    return this.isRunning.value;
+  }
 
   startTimer(): void {
     this.isRunning.next(true);
@@ -22,6 +27,7 @@ export class StopwatchService {
   resetTimer(): void {
     this.stopTimer();
     this.time = 0;
+    this.laps = []; // Also reset laps
   }
 
   getTimer(): Observable<any> {
@@ -40,6 +46,19 @@ export class StopwatchService {
         }
       })
     );
+  }
+
+  addLap(): void {
+    if (this.laps.length < 8)
+    this.laps.push(this.splitTime(this.time));
+  }
+
+  resetLaps(): void {
+    this.laps = [];
+  }
+
+  getLaps(): any[] {
+    return this.laps;
   }
 
   private splitTime(time: number): any {

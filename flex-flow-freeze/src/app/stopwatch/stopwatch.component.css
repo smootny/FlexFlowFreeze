@@ -1,25 +1,24 @@
 .input-container {
   display: flex;
-  padding-top: 200px;
+  padding-top: 120px;
   height: 100vh;
-  gap: 100px;
+  gap: 70px;
   background: rgb(53, 231, 77);
   background: linear-gradient(0deg, rgba(53, 231, 77, 1) 0%, rgba(231, 248, 231, 1) 100%);
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
 
 #timer {
-  background-color: #242424;
-  color: #81d830;
+  color: #414341;
   text-align: center;
   font-size: 80px;
   line-height: 100%;
 }
 
 .add-button {
-  display: flex;
-  padding: 30px 24px;
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   border: 3px solid black;
   background: #19361e;
@@ -47,12 +46,11 @@
 
 .button-container {
   display: flex;
-  gap: 50px;
 }
 
 .reset-button {
-  display: flex;
-  padding: 30px 20px;
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   border: 3px solid black;
   background: #19361e;
@@ -73,4 +71,41 @@
 
 .reset-button:hover {
   background-color: #e84350;
+}
+
+.lap-button {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background: #19361e;
+  box-shadow: 0 0 0 3px #19361e;
+  color: #e45e69;
+  font-size: 16px;
+  margin: 0 auto;
+  opacity: 100%;
+  background-color: #e45e69;
+  border-color: #45ac48;
+  color: black;
+  border: 3px solid #e6a1a7;
+  box-shadow: 0 0 0 3px #05d328;
+  -webkit-box-shadow: 0px 0px 100px 20px #05d328;
+  -moz-box-shadow: 0px 0px 100px 20px #05d328;
+  box-shadow: 0px 0px 100px 20px #05d328;
+}
+
+.lap-button:hover {
+  background-color: #e84350;
+}
+
+#laplist {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  font-size: 16px;
+  justify-content: center;
+}
+.lap-display {
+  background-color: lightgreen;
+  text-align: center;
 }
