@@ -1,0 +1,15 @@
+<div class="input-container">
+  <div id="timer">
+    {{timeDisplay.minutes}}:{{timeDisplay.seconds}}.{{timeDisplay.milliseconds}}
+  </div>
+  <div class="button-container">
+    <button class="add-button" (click)="toggleStartStop()">{{  isStopwatchRunning ? 'Stop' : 'Start' }}</button>
+    <button class="reset-button" (click)="resetTimer()">Reset</button>
+    <button class="lap-button" (click)="addLap()">Lap</button>
+  </div>
+  <ul id="laplist">
+    <li class="lap-display" *ngFor="let lap of laps">
+      {{lap.minutes}}:{{lap.seconds}}.{{lap.milliseconds}}
+    </li>
+  </ul>
+</div>

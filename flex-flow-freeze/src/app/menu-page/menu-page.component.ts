@@ -15,6 +15,10 @@ export class MenuPageComponent {
         // Navigate to progress-bar page
         this.router.navigate(['/progress-bar']);
         break;
+      case 'stopwatch':
+        // Navigate to notebook page
+        this.router.navigate(['/stopwatch']);
+        break;
       case 'notebook':
         // Navigate to notebook page
         this.router.navigate(['/notes-layout']);

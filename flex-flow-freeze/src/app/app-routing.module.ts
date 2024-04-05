@@ -10,11 +10,13 @@ import { NotesLayoutComponent } from './notes-layout/notes-layout.component';
 import { WaterIntakeCalculatorComponent } from './water-intake-calculator/water-intake-calculator.component';
 import { ImageComparisonComponent } from './image-comparison/image-comparison.component';
 import {SettingsComponent} from "./settings/settings.component";
+import {StopwatchComponent} from "./stopwatch/stopwatch.component";
 
 const routes: Routes = [
   { path: '', component: WelcomePageComponent },
   { path: 'progress-bar', component: ProgressBarComponent },
   { path: 'calories-calculator', component: CaloriesCalculatorComponent },
+  { path: 'stopwatch', component: StopwatchComponent },
   { path: 'menu', component: MenuPageComponent },
   {
     path: 'notes-layout',
