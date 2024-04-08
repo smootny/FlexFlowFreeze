@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StopwatchService } from '../shared/stopwatch.service';
 
@@ -53,5 +53,10 @@ export class StopwatchComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.stopwatchSubscription.unsubscribe();
+  }
+
+  onXButtonClick(index: number): void {
+    this.stopwatchService.removeLap(index);
+    this.laps = this.stopwatchService.getLaps()
   }
 }

@@ -108,4 +108,23 @@
 .lap-display {
   background-color: lightgreen;
   text-align: center;
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.x-button {
+  height: 26px;
+  width: 26px;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/delete_icon.svg);
+  background-position: center;
+}
+
+.x-button:hover {
+  background-color: #abf1ac;
 }
