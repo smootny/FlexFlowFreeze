@@ -72,4 +72,10 @@ export class StopwatchService {
       milliseconds: milliseconds.toString().padStart(2, '0')
     };
   }
+
+  removeLap(index: number): void {
+    if (index > -1 && index < this.laps.length) {
+      this.laps.splice(index, 1);
+    }
+  }
 }

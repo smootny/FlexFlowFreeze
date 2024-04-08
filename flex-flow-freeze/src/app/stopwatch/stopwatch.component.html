@@ -10,6 +10,7 @@
   <ul id="laplist">
     <li class="lap-display" *ngFor="let lap of laps">
       {{lap.minutes}}:{{lap.seconds}}.{{lap.milliseconds}}
+      <button class="x-button" (click)="onXButtonClick(0)"></button>
     </li>
   </ul>
 </div>
