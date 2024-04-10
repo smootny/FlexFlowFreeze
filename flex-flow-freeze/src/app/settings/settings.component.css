@@ -145,3 +145,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.icon {
+  width: auto;
+  height: 40px;
+}
