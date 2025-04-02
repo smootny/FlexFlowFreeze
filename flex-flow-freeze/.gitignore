@@ -10,6 +10,8 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+.npm/_logs/
+
 
 # IDEs and editors
 .idea/
@@ -18,6 +20,7 @@ yarn-error.log
 .c9/
 *.launch
 .settings/
+.npm/_logs/
 *.sublime-workspace
 
 # Visual Studio Code
