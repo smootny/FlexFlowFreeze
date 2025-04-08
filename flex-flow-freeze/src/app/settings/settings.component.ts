@@ -14,7 +14,7 @@ export class SettingsComponent {
 
   ngOnInit() {
     this.sharedNameService.currentName.subscribe((name: string) => {
-      this.userName = name; // Set the name from the shared service
+      this.userName = name;
     });
   }
   onFileChange(event: any): void {

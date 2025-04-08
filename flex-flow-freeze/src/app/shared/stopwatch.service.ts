@@ -27,7 +27,7 @@ export class StopwatchService {
   resetTimer(): void {
     this.stopTimer();
     this.time = 0;
-    this.laps = []; // Also reset laps
+    this.laps = [];
   }
 
   getTimer(): Observable<any> {

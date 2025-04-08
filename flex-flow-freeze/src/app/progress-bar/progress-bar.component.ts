@@ -83,31 +83,30 @@ export class ProgressBarComponent {
     }, 10);
   }
   emptyProgressBar() {
-    this.currentHeight = 0; // Start from 0
+    this.currentHeight = 0;
     this.renderer.setStyle(this.progressBar.nativeElement, 'width', '100%');
-    this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%'); // Reset left
+    this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%');
     this.renderer.setStyle(this.progressBar.nativeElement, 'top', 'auto');
-    this.renderer.setStyle(this.progressBar.nativeElement, 'bottom', '0%'); // Position bar at the bottom
+    this.renderer.setStyle(this.progressBar.nativeElement, 'bottom', '0%');
 
     const incrementSize = 100 / (this.emptyTime * 100);
     this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', '#00FFFF');
     this.interval = setInterval(() => {
-      this.currentHeight += incrementSize; // Increase the height
+      this.currentHeight += incrementSize;
       this.renderer.setStyle(this.progressBar.nativeElement, 'height', `${this.currentHeight}%`);
       if (this.currentHeight >= 100) {
         clearInterval(this.interval);
         if (this.repetitions > 0) {
           this.runRepetitions();
         } else {
-          this.resetAll(); // Reset everything once all is done
+          this.resetAll();
         }
       }
     }, 10);
   }
 
   resetAll() {
-    // Reset the progress bar's appearance
-    this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', 'white'); // Or any other default color
+    this.renderer.setStyle(this.progressBar.nativeElement, 'backgroundColor', 'white');
     this.renderer.setStyle(this.progressBar.nativeElement, 'height', '0');
     this.renderer.setStyle(this.progressBar.nativeElement, 'width', '100%');
     this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%');

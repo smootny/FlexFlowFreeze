@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "flex-flow-freeze:build:production"
+              "buildTarget": "flex-flow-freeze:build:production"
             },
             "development": {
-              "browserTarget": "flex-flow-freeze:build:development"
+              "buildTarget": "flex-flow-freeze:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "flex-flow-freeze:build"
+            "buildTarget": "flex-flow-freeze:build"
           }
         },
         "test": {

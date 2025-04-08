@@ -16,7 +16,6 @@ export class ImageComparisonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // This function will be triggered when the input range value changes
   adjustImage(event: any): void {
     const sliderVal = event.target.value;
     this.renderer.setStyle(this.dragLine.nativeElement, 'left', `${sliderVal}%`);

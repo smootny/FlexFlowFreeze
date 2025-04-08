@@ -1,0 +1,10 @@
+platform :ios, '18.0'
+
+use_frameworks!
+use_modular_headers!
+
+install! 'cocoapods', :disable_input_output_paths => true
+
+target 'App' do
+  pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
+end
