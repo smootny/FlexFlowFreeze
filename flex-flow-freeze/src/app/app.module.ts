@@ -36,9 +36,16 @@ import {StopwatchService} from "./shared/stopwatch.service";
     SettingsComponent,
     StopwatchComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule,
-    NgCircleProgressModule.forRoot(), NgOptimizedImage],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NgCircleProgressModule.forRoot(),
+    NgOptimizedImage,
+  ],
   providers: [StopwatchService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
