@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import {SharedNameService} from "../shared/shared-name.service";
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -10,7 +11,7 @@ export class SettingsComponent {
   @ViewChild('photo') photo: ElementRef | undefined;
   @ViewChild('file') file: ElementRef | undefined;
   userName: string = '';
-  constructor(private sharedNameService: SharedNameService) {}
+  constructor(private sharedNameService: SharedNameService, private router: Router) {}
 
   ngOnInit() {
     this.sharedNameService.currentName.subscribe((name: string) => {
@@ -30,5 +31,8 @@ export class SettingsComponent {
 
       reader.readAsDataURL(choosedFile);
     }
+  }
+  goBack():void {
+    this.router.navigate(['/menu'])
   }
 }
