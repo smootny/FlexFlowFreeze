@@ -1,4 +1,5 @@
 import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-progress-bar',
@@ -19,7 +20,7 @@ export class ProgressBarComponent {
   debounceTime!: number;
   repetitions!: number;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private router: Router) {}
 
   inputsFilled: boolean = false;
 
@@ -110,5 +111,9 @@ export class ProgressBarComponent {
     this.renderer.setStyle(this.progressBar.nativeElement, 'height', '0');
     this.renderer.setStyle(this.progressBar.nativeElement, 'width', '100%');
     this.renderer.setStyle(this.progressBar.nativeElement, 'left', '0%');
+  }
+
+  goBack(): void {
+    this.router.navigate(['/menu'])
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-water-intake-calculator',
@@ -17,6 +18,8 @@ export class WaterIntakeCalculatorComponent {
   showProgress: boolean = false;
   circleStyle!: string;
   inputsFilled: boolean = false; 
+
+  constructor(private router: Router) {}
 
   checkInputs(): void {
     this.inputsFilled = this.gender.trim() !== '' && this.age !== undefined && this.weight !== undefined && this.age !== null && this.weight !== null;
@@ -50,5 +53,9 @@ export class WaterIntakeCalculatorComponent {
   updateCircle() {
     const circlePercentage = this.waterIntakePercentage > 100 ? 100 : this.waterIntakePercentage;
     this.circleStyle = `conic-gradient(blue ${circlePercentage}%, #eee ${circlePercentage}%)`;
+  }
+
+  goBack() {
+    this.router.navigate(['/menu']);
   }
 }

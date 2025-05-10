@@ -119,3 +119,16 @@
     flex-direction: column;
     gap: 70px;
   }
+
+  .back-icon {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  

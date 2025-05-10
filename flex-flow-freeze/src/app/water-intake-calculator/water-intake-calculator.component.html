@@ -1,6 +1,6 @@
 <div class="layout-box">
-
-    <div class="input-box" *ngIf="!showProgress">
+  <img src="../../assets/right-arrow.png" class="back-icon" (click)="goBack()" alt="Back" />
+  <div class="input-box" *ngIf="!showProgress">
         <select class="input-time" [(ngModel)]="gender" (change)="checkInputs()">
           <option value="male">Male</option>
           <option value="female">Female</option>
@@ -32,6 +32,5 @@
         <input class="input-time" type="number" [(ngModel)]="inputWater" (input)="checkWaterInput()" placeholder="Water intake (ml)">
         <button class="add-button" [class.active]="waterInputFilled" (click)="updateProgress()">+ Add</button>
       </div>
-      
 </div>
 
